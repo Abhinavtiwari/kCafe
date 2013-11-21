@@ -1,0 +1,62 @@
+<div class="page-header">
+  <h1>Editing Item #<%= @item.id %></h1>
+</div>
+
+<%= form_tag(item_url(@item), method: 'patch', class: 'form-horizontal') do %>
+
+  <div class="form-group">
+    <%= label_tag :weekday, nil, class: 'col-md-2 control-label' %>
+    
+    <div class="col-md-6">
+      <%= text_field_tag :weekday, @item.weekday, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :item_name, nil, class: 'col-md-2 control-label' %>
+    
+    <div class="col-md-6">
+      <%= text_field_tag :item_name, @item.item_name, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :item_picture, nil, class: 'col-md-2 control-label' %>
+    
+    <div class="col-md-6">
+      <%= text_field_tag :item_picture, @item.item_picture, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :item_category, nil, class: 'col-md-2 control-label' %>
+    
+    <div class="col-md-6">
+      <%= text_field_tag :item_category, @item.item_category, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :item_price, nil, class: 'col-md-2 control-label' %>
+    
+    <div class="col-md-6">
+      <%= text_field_tag :item_price, @item.item_price, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :float, nil, class: 'col-md-2 control-label' %>
+    
+    <div class="col-md-6">
+      <%= text_field_tag :float, @item.float, class: 'form-control'%>
+    </div>
+  </div>
+
+  
+    <div class="form-group">
+    <div class="col-md-offset-2 col-md-6">
+          <%= submit_tag "Update Item", class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+<% end %>
